@@ -77,45 +77,6 @@ const goods = [
     siteLink:
       "https://unsplash.com/images/food/cake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   },
-  {
-    id: 7,
-    title: "Sugar Glazed Donuts",
-    price: 15.0,
-    category: "donut",
-    description: "",
-    img: "https://cdn.pixabay.com/photo/2016/10/13/00/22/illustration-1736462__340.png",
-    picLink:
-      "https://unsplash.com/@the_modern_life_mrs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-    artist: "Heather Ford",
-    siteLink:
-      "https://unsplash.com/images/food/donut?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-  },
-  {
-    id: 8,
-    title: "Blueberry Pie",
-    price: 65.5,
-    category: "pie",
-    description: "",
-    img: "https://cdn.pixabay.com/photo/2016/10/13/00/22/illustration-1736462__340.png",
-    picLink:
-      "https://unsplash.com/@photograffihk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-    artist: "Raphael Maksian",
-    siteLink:
-      "https://unsplash.com/photos/vPedCtyqArw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-  },
-  {
-    id: 9,
-    title: "Strawberry Shortcake",
-    price: 56.89,
-    category: "cake",
-    description: "",
-    img: "https://cdn.pixabay.com/photo/2016/10/13/00/22/illustration-1736462__340.png",
-    picLink:
-      "https://unsplash.com/@heatherbarnes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-    artist: "Heather Barnes",
-    siteLink:
-      "https://unsplash.com/images/food/cake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-  },
 ];
 if (exports) {
   exports.goods = goods;

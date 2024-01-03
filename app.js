@@ -8,7 +8,7 @@ var welcomeRouter = require("./routes/welcome.js");
 var catalogRouter = require("./routes/catalog");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-var buyTicketRouter = require("./routes/buyTicket");
+var addToCartRouter = require("./routes/addToCart");
 
 var app = express();
 
@@ -26,7 +26,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/welcome", welcomeRouter);
 app.use("/catalog", catalogRouter);
-app.use("/buyTicket", buyTicketRouter);
+app.use("/addToCart", addToCartRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};

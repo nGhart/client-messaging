@@ -25,8 +25,7 @@
 }
 
 .cardHeight {
-  height: 300px;
-  margin-bottom: 15px;
+  margin: 10px;
 }
 img {
   border: 2px solid #d6970a;
@@ -65,15 +64,25 @@ img {
       <div class="row">
 
         <% goods.forEach(function(good,index) { %>
-          <div class="col col-3">
+          <div class="col col-sm-6 col-lg-4">
             <div class="card cardHeight">
-              <img src="<%=good.img%>" class="card-img-top" alt="<%=good.title %>"/>
-              <div class="card-body ">
-                <h5 class="card-title"><%= good.title %></h5>
-                <p class="card-text price itemNprice">Price: <span>GHC <%= good.price %></span></p>
+             <div class="row">
+               <div class="col col-sm-4">
+                <img src="<%=good.img%>" class="card-img-top" alt="<%=good.title %>" width="100%"
+                        height="100%"/>
+               </div>
+              <div class="col col-sm-8">
+                <div class="card-body ">
+                <h5 class="card-title itemNprice"><%= good.title %> <span class="price">GHC <%= good.price %></span></h5>
+               
                 <p class="card-text itemNprice">Category: <span style="text-transform: capitalize;"><%= good.category %></span></p>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit.
+                </p>
+            
                 <p>
-                  <form method="POST" action="/buyTicket">
+                  <form method="POST" action="/addToCart">
                     <div class="container">
                       <input type="hidden" name="id" value="<%=good.id%>"/>
                       <div class="row ">
@@ -84,6 +93,8 @@ img {
                   </form>
                 </p>
               </div>
+              </div>
+             </div>
             </div>
           </div>
         <% }) %>

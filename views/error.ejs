@@ -1,3 +1,42 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+    <style>
+      .sorrySection {
+        background-color: rgba(255, 192, 203, 0.187);
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 70px;
+      }
+      .sorryContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sorryContainer img {
+        border: none;
+        margin-top: 30px;
+        width: 50px;
+      }
+      .sorryContainer h2 {
+        font-family: "Abril Fatface", cursive;
+        margin-top: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div className="sorrySection">
+      <div className="sorryContainer">
+        <h2>Sorry</h2>
+        <h1><%= message %></h1>
+        <h2><%= error.status %></h2>
+        <pre><%= error.stack %></pre>
+      </div>
+      <h5>We do not carry that item on our menu</h5>
+    </div>
+  </body>
+</html>

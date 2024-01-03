@@ -7,8 +7,7 @@ const { sendMessage, getTemplatedMessageInput } = require("../messageHelper");
 
 router.use(bodyParser.json());
 
-router.post("/", function (req, res, next) {
-  //console.log(req);
+router.post("/", function (req, res) {
   var good = goods.filter((v, i) => v.id == req.body.id)[0];
 
   var data = getTemplatedMessageInput(process.env.RECIPIENT_WAID, good);
@@ -16,12 +15,10 @@ router.post("/", function (req, res, next) {
   sendMessage(data)
     .then(function (response) {
       res.status(200).redirect("/catalog");
-      //return;
     })
     .catch(function (error) {
       console.log(error);
       res.sendStatus(500);
-      //return;
     });
 });
 
