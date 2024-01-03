@@ -18,41 +18,15 @@
   margin-top: 35px;
   margin-bottom: 10px;
   color: #d6970a;
+    font-family: 'Abril Fatface', cursive;
 }
 .filterButtons:hover {
   background-color: #d6970a;
 }
-.search {
-  border-radius: 20px;
-  border: none;
-  width: 300px;
-  padding: 2px 2px 2px 5px;
-  margin-bottom: 20px;
-}
+
 .cardHeight {
-  height: 200px;
-}
-.sorrySection {
-  background-color: rgba(255, 192, 203, 0.187);
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 70px;
-}
-.sorryContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sorryContainer img {
-  border: none;
-  margin-top: 30px;
-  width: 50px;
-}
-.sorryContainer h2 {
-  font-family: 'Abril Fatface', cursive;
-  margin-top: 35px;
+  height: 300px;
+  margin-bottom: 15px;
 }
 img {
   border: 2px solid #d6970a;
@@ -68,6 +42,20 @@ img {
 .price {
   font-size: 18px;
 }
+.filterButtons {
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 5px;
+  margin: 10px;
+  background-color: pink;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.filterButtons:hover {
+  background-color: #d6970a;
+}
     </style>
   </head>
   <body>
@@ -78,19 +66,19 @@ img {
 
         <% goods.forEach(function(good,index) { %>
           <div class="col col-3">
-            <div class="card">
+            <div class="card cardHeight">
               <img src="<%=good.img%>" class="card-img-top" alt="<%=good.title %>"/>
-              <div class="card-body">
+              <div class="card-body ">
                 <h5 class="card-title"><%= good.title %></h5>
-                <p class="card-text">Price: GHC <%= good.price %></p>
-                <p class="card-text">Category: <%= good.category %></p>
+                <p class="card-text price itemNprice">Price: <span>GHC <%= good.price %></span></p>
+                <p class="card-text itemNprice">Category: <span style="text-transform: capitalize;"><%= good.category %></span></p>
                 <p>
                   <form method="POST" action="/buyTicket">
                     <div class="container">
                       <input type="hidden" name="id" value="<%=good.id%>"/>
-                      <div class="row gx-5">
+                      <div class="row ">
                        
-                        <input type="submit" value="Add to Cart" class=""/>
+                        <input type="submit" value="Add to Cart" class="filterButtons"/>
                       </div>
                     </div>
                   </form>
