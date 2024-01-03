@@ -78,6 +78,7 @@ const goods = [
       "https://unsplash.com/images/food/cake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   },
 ];
-if (exports) {
-  exports.goods = goods;
-}
+// if (exports) {
+//   exports.goods = goods;
+// }
+module.exports = goods;
