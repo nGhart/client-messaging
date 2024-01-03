@@ -26,6 +26,7 @@ function sendMessage(data) {
 //     },
 //   });
 // }
+
 function getTextMessageInput(recipient) {
   return JSON.stringify({
     messaging_product: "whatsapp",
