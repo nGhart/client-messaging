@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 var bodyParser = require("body-parser");
 require("dotenv").config();
-var { goods } = require("../public/javascripts/data");
+var goods = require("../public/javascripts/data");
 const { sendMessage, getTemplatedMessageInput } = require("../messageHelper");
 
 router.use(bodyParser.json());
